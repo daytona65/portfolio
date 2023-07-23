@@ -1,0 +1,33 @@
+nav {
+    background: transparent;
+    width: max-content;
+    display: block; /* Instead of flex, block means it takes up the entire width */
+    /* flex-direction: column; */
+    z-index: 2;
+    position: fixed;
+    right: 5%;
+    bottom: 50%;
+    display: flex;
+    gap: 0.8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(15px);
+}
+
+/* ================ Link properties ============== */
+/* Without the nav, will apply to ALL a */
+nav a {
+    background: transparent;
+    padding: 0.9rem;
+    border-radius: 50%;
+    display: flex;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    background: red;
+}
+
+nav a.active {
+    background: var(--color-bg);
+    color: var(--color-white);
+}

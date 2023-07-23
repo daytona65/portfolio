@@ -1,0 +1,145 @@
+/* Sets the CSS for the entire header section
+    rem is used for padding and margins 
+    vh is relative to viewport height 
+    hidden means overflow of content is hidden. Other options like visible (content renders OUTSIDE the box) and scrollbar (adds a scrollbar to see the rest of the content)
+*/
+header {
+    padding-top: 7rem;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem;
+}
+
+/* dot signifies className */
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+/* =================== CTA =======================*/
+
+.header__cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/* =================== Socials ====================*/
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem; /* Sets gap between the icons */
+    position: fixed; /* Fixes it in place on the page */
+    right: 95%;
+    bottom: 0%;
+}
+
+.header__socials::after {
+    content: '';
+    width: 1px;
+    height: 10rem;
+    background: var(--color-light-transparent);
+}
+
+/* =======================Biography=====================*/
+.header__biography {
+    display: flex;
+    position: relative;
+    margin-top: 4rem;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.biography__content {
+    text-align: left;
+    flex: 1;
+    color: white;
+    min-width: 30rem;
+}
+
+.biography__content h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+.biography__content p {
+    font-size: 1.5rem;
+    color: var(--color-light);
+}
+/* =================== Profile Image ====================*/
+.profile {
+    border: 3px solid var(--color-light);
+    width: 22rem;
+    height: 30rem;
+    position: relative;
+    left: 2%; /* 50% minus half width to put it in the center */
+    margin-top: 4rem;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.profile__image {
+    position: relative;
+    border-radius: 10px;
+    width: 22rem;
+    height: 30rem;
+    left: -10%;
+    bottom: 8%;
+    transition: var(--transition);
+}
+
+.profile__image:hover{
+    position: relative;
+    width: 22rem;
+    height: 30rem;
+    left: -7.5%;
+    bottom: 5.5%;
+}
+
+/* =================== Scroll Down | Useless Button Please Don't Use it====================*/
+.scroll__down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+/* ============= MEDIA QUERIES (MEDIUM) ===================*/
+@media screen and (max-width:1024px) {  
+    header {
+        height: 100vh;
+    }
+
+    .header__biography {
+        flex-direction: column-reverse;
+    }
+
+    .profile {
+        left: 30%;
+    }
+}
+
+/* ============= MEDIA QUERIES (SMALL) ===================*/
+/* Makes stuff disappear to fit into mobile devices */
+@media screen and (max-width:600px) {
+    header {
+        height: 150vh;
+    }
+
+    .profile {
+        left: 20%;
+    }
+
+    .header__socials,
+    .scroll__down {
+        display: none;
+    }
+}
