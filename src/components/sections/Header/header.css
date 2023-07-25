@@ -16,6 +16,7 @@ header {
     text-align: center;
     height: 100%;
     position: relative;
+    z-index: 5;
 }
 
 /* =================== CTA =======================*/
@@ -66,6 +67,17 @@ header {
     font-size: 2rem;
     color: var(--color-white);
     font-weight: 500;
+}
+
+.biography__content h3::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 1px;
+    left: 26%;
+    top: 10%;
+    background: var(--color-light-transparent);
+    position: absolute;
 }
 
 .biography__content p {

@@ -1,20 +1,144 @@
-.work {
-    position: relative;
-    padding-top: 7rem;
+.work__section {
     height: 100vh;
     margin-left: auto;
     margin-right: auto;
     max-width: 80rem;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.work h3 {
-    text-align: center;
+.work__section h3 {
+    text-align: left;
     font-size: 2rem;
     color: var(--color-white);
     font-weight: 500;
 }
 
-.work p {
-    font-size: 1.5rem;
+.work__section h3::after {
+    content: '';
+    display: block;
+    width: 10rem;
+    height: 1px;
+    top: -10%;
+    background: var(--color-light-transparent);
+    position: absolute;
+}
+
+/* .work__section h3::after {
+    content: '';
+    width: 10rem;
+    height: 1px;
+    right: 0;
+    background: var(--color-light-transparent);
+    position: absolute;
+} */
+
+.job {
+    display: flex;
+    flex-direction: row;
+}
+
+.job__TabList {
+    display: flex;
+    width: 10.5rem;
+    height: 10.5rem;
+    flex-direction: column;
+    position: absolute;
+    list-style: none;
+    z-index: 3;
+    width: max-content;
+    border-left: 2px solid var(--color-primary);
+}
+
+.job__TabButton {
+    text-align: left;
+    padding: 0.5rem 1rem;
+    cursor:pointer;
+    transition: var(--transition1);
+}
+
+.job__TabButton_isActive {
+    text-align: left;
+    padding: 0.5rem 1.3rem;
+    cursor: pointer;
+    background-color: var(--color-bg-light);
+    border-left: 5px solid var(--color-light);
+    transition: var(--transition1);
+}
+
+.job__TabButton:hover {
+    background-color: var(--color-bg-light);
+}
+
+.job__Highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 2px;
+    height: var(--tab-height);
+    border-radius: var(--border-radius);
+    background: var(--green);
+    transform: translateY(calc(var(--activeTabId) * var(--tab-height)));
+    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-delay: 0.1s;
+}
+
+.job__TabPanels {
+    margin-left: 10rem;
+    position: relative;
+    left: 20%;
+    width: 40rem;
+    height: 20rem;
+}
+
+.job__TabPanel {
+    width: 100%;
+    height: auto;
+}
+
+.range {
+    font-size: larger;
+}
+
+/* Panel Description */
+/* @font-face {
+font-family: 'YourCustomFont';
+src: url('your-custom-font.woff2') format('woff2'),
+        url('your-custom-font.woff') format('woff');
+} */
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+li::before {
+    content: "\2AA7"; /* Use the appropriate Unicode value for your font icon */
+    font-family: 'YourCustomFont';
     color: var(--color-light);
+    margin-right: 8px;
+}
+
+/*======================== Fade Transition ======================= */
+/* The starting state of the component before it enters */
+.fade-enter {
+    opacity: 0;
+}
+  
+  /* The active state of the component while it is entering */
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 250ms;
+}
+  
+  /* The starting state of the component before it exits */
+.fade-exit {
+    opacity: 1;
+}
+  
+  /* The active state of the component while it is exiting */
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 250ms;
 }
