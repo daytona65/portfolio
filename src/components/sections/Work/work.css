@@ -114,8 +114,9 @@ ul {
 }
 
 li::before {
-    content: "\2AA7"; /* Use the appropriate Unicode value for your font icon */
-    font-family: 'YourCustomFont';
+    content: "\2AA7";
+    /* content: url('../../../assets/fficons/folderwink.png'); */
+    font-family: 'Arial';
     color: var(--color-light);
     margin-right: 8px;
 }

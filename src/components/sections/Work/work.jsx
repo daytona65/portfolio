@@ -84,7 +84,7 @@ const Work = () => {
 					{jobData.map((job, index) => {
 						const { title, company, location, range, url, description } = job;
 						return (
-							<CSSTransition key={index} in={activeIndex === index} classNames="fade">
+							<CSSTransition key={index} in={activeIndex === index} timeout={5000} classNames="fade">
 								<div
 									className="job__TabPanel"
 									id={`panel-${index}`}

@@ -9,7 +9,6 @@ const Header = () => {
 				<h2> Hello, I am </h2>
 				<h1>Nicholas</h1>
 				<h2 className="text-light">Software Engineer</h2>
-				<Socials/>
 				<Biography/>
 			</div>
 		</header>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/sections/Header/header';
+import Socials from './components/sections/Header/socials';
 import Nav from './components/Navigation/nav';
 import Landing from './components/Landing (Header)/landing';
 import About from './components/sections/About/about';
@@ -25,6 +26,7 @@ function App() {
   return (
     <>
         <Header />
+        <Socials/>
         <Work />
         {/* <About /> */}
     </>
