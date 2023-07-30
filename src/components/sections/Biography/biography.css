@@ -1,0 +1,119 @@
+.container__biography {
+    position: relative; 
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10rem;
+    max-width: 70%;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.profile__internships,
+.profile__projects {
+    width: 25rem;
+    position: absolute;
+    top: 20%;
+    font-size: 3rem;
+    line-height: 3rem;
+    transition: var(--transition);
+}
+
+.profile__internships {
+    left: -3%;
+}
+
+.profile__projects {
+    right: -5%;  
+}
+
+.profile__mobile {
+    display: none;
+}
+.counter {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.biography__content {
+    color: white;
+}
+
+.biography__header {
+    padding-top: 2rem;
+    font-size: 2rem;
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+/* .biography__header::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 1px;
+    left: 40%;
+    background: var(--color-light-transparent);
+    position: absolute;
+} */
+
+.biography__content p {
+    font-size: 1.5rem;
+    color: var(--color-light);
+}
+/* =================== Profile Image ====================*/
+.profile__border,
+.profile__image {
+    position: relative;
+    width: 20rem;
+    height: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.profile__border {
+    border: 3px solid var(--color-light);
+}
+
+.profile__image {
+    left: -5%;
+    bottom: 4%;
+}
+
+.profile__image:hover {
+    left: -7.75%;
+    bottom: 4.75%;
+}
+
+
+/* ============= MEDIA QUERIES (SMALL - MEDIUM) ===================*/
+@media screen and (max-width:1024px) {  
+    .container__biography {
+        height: auto;
+    }
+
+    .profile {
+        flex-direction: column;
+    }
+
+    .profile__internships,
+    .profile__projects {
+        display: none;
+    }
+
+    .profile__mobile {
+        margin: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content:space-evenly;
+    }
+
+
+}

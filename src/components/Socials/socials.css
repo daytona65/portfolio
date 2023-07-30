@@ -1,0 +1,32 @@
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem; /* Sets gap between the icons */
+    position: fixed; /* Fixes it in place on the page */
+    right: 95%;
+    bottom: 0%;
+}
+
+.socials::after {
+    content: '';
+    width: 1px;
+    height: 10rem;
+    background: var(--color-light-transparent);
+}
+
+
+/* ============= MEDIA QUERIES (MEDIUM) ===================*/
+@media screen and (max-width:1024px) {  
+    .socials {
+        display: none;
+    }
+}
+
+/* ============= MEDIA QUERIES (SMALL) ===================*/
+/* Makes stuff disappear to fit into mobile devices */
+@media screen and (max-width:600px) {
+    .socials {
+        display: none;
+    }
+}

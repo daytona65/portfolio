@@ -12,7 +12,7 @@ const Work = () => {
 			company: 'Thales',
 			location: 'Singapore',
 			range: 'May 2023 - August 2023',
-			url: 'https://www.linkedin.com/company/thales/mycompany/verification/',
+			url: 'https://www.thalesgroup.com/en/digital-identity-and-security',
 			description: [
 				"Implement new features and bug fixes in Java with stringent unit-testing to continuously improve user experience for internal tools used in Thales DIS.",
 				"Help with code review of other full-time software engineers’ code to maintain code quality and ensure correct implementation of features.",
@@ -35,11 +35,23 @@ const Work = () => {
 		},
 
 		{
+			title: 'Blockchain Developer',
+			company: 'NUS Fintech Society',
+			location: 'Singapore',
+			range: 'Aug 2022 - Apr 2023',
+			url: 'https://fintechsociety.comp.nus.edu.sg/',
+			description: [
+				"Developed the front-end of an on-chain subscription web application to help clients accept crypto for subscription-based services.",
+				"Participate in weekly club meetings to discuss the latest happenings in the Blockchain space.",
+			],
+		},
+
+		{
 			title: 'Junior Full Stack Developer',
-			company: 'ServerSam Pte Ltd',
+			company: 'ServerSam',
 			location: 'Singapore',
 			range: 'May 2022 - July 2022',
-			url: 'https://www.linkedin.com/company/serversam-pte-ltd/',
+			url: 'https://serversam.com/',
 			description: [
 				"Developed websites for e-commerce businesses on the ASP.NET framework with SQL Server Management studio databases in Javascript, C#, HTML, CSS",
 				"Worked with other interns to implement features and resolve bug tickets.",
@@ -48,12 +60,10 @@ const Work = () => {
 	];	
 
 	const [activeIndex, setActiveIndex] = useState(0);
-	const [tabFocus, setTabFocus] = useState(null);
 	const tabs = useRef([]);
-	const revealContainer = useRef(null);
 
 	return (
-		<section id="work" className="work__section">
+		<div id="work" className="container work__container">
             <h3 className="work__header">Where I've Worked</h3>
 			&nbsp;&nbsp;&nbsp;&nbsp;
 			<div className="job">
@@ -97,7 +107,7 @@ const Work = () => {
 										<span>{title}</span>
 										<span className="company">
 											&nbsp; @ &nbsp;
-											<a href={url} className="inline-link">
+											<a href={url} className="inline-link" target="_blank">
 												{company}
 											</a>
 										</span>
@@ -116,7 +126,36 @@ const Work = () => {
 					})}
 				</div>
 			</div>
-        </section>
+
+			<div className='job__mobile'>
+				{jobData.map((job, index) => {
+					const { title, company, location, range, url, description } = job;
+					return (
+						<div
+							className="job__TabPanel"
+							>
+							<h3>
+								<span>{title}</span>
+								<span className="company">
+									&nbsp; @ &nbsp;
+									<a href={url} className="inline-link" target="_blank">
+										{company}
+									</a>
+								</span>
+							</h3>
+
+							<p className="range">{range}</p>
+							<ul>
+								{description.map((point, index) => (
+									<li key={index}>{point}</li>
+								))}
+							</ul>
+						</div>
+					);
+				})}
+				
+			</div>
+        </div>
 	);
 };
 

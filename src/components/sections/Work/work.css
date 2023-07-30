@@ -1,20 +1,19 @@
-.work__section {
+.work__container {
     height: 100vh;
     margin-left: auto;
     margin-right: auto;
     max-width: 80rem;
-    flex-direction: column;
-    justify-content: center;
 }
 
-.work__section h3 {
-    text-align: left;
+
+.work__container h3 {
+    text-align: center;
     font-size: 2rem;
     color: var(--color-white);
     font-weight: 500;
 }
 
-.work__section h3::after {
+/* .work__section h3::after {
     content: '';
     display: block;
     width: 10rem;
@@ -22,21 +21,16 @@
     top: -10%;
     background: var(--color-light-transparent);
     position: absolute;
-}
-
-/* .work__section h3::after {
-    content: '';
-    width: 10rem;
-    height: 1px;
-    right: 0;
-    background: var(--color-light-transparent);
-    position: absolute;
 } */
 
 .job {
-    display: flex;
-    flex-direction: row;
+    display: block;
 }
+
+.job__mobile {
+    display: none;
+}
+
 
 .job__TabList {
     display: flex;
@@ -47,13 +41,13 @@
     list-style: none;
     z-index: 3;
     width: max-content;
-    border-left: 2px solid var(--color-primary);
 }
 
 .job__TabButton {
     text-align: left;
     padding: 0.5rem 1rem;
     cursor:pointer;
+    border-left: 2px solid var(--color-primary);
     transition: var(--transition1);
 }
 
@@ -142,4 +136,28 @@ li::before {
 .fade-exit-active {
     opacity: 0;
     transition: opacity 250ms;
+}
+
+/* ============= MEDIA QUERIES (SMALL-MEDIUM) ===================*/
+@media screen and (max-width:1024px) {  
+    .work__section {
+        height: auto;
+    }
+    
+    .job {
+        display: none;
+    }
+
+    .job__mobile {
+        display: grid;
+    }
+
+    .job__TabPanel {
+        /* background-color: var(--color-primary); */
+        border: 2px solid var(--color-primary);
+        padding: 1rem;
+        margin-bottom: 5rem;
+        border-radius: 10px;
+    }
+    
 }

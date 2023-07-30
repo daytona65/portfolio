@@ -11,7 +11,7 @@
 }
 
 :root { 
-  --color-bg: #0c1c19;
+  --color-bg: #0c1c1973;
   --color-bg-light: rgb(17, 42, 37);
   --color-bg-variant: #424109;
   --color-primary: #4e6c0e62;
@@ -25,7 +25,7 @@
 
   --container-width-lg: 75%;
   --container-width-md: 85%;
-  --container-width-ms: 90%;
+  --container-width-sm: 90%;
 }
 
 html {
@@ -92,7 +92,7 @@ section > h2 {
 
 /* Hyperlink properties */
 a {
-  color: var(--color-primary);
+  color: var(--color-primary-variant);
   transition: var(--transition);
 }
 
