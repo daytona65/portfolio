@@ -20,7 +20,9 @@ const Biography = () => {
 
         <div className='profile'>
           <div className='profile__internships'>
-            <Counter n ={4}/>
+            <div className='counter'>
+              <Counter className='counter' n ={4}/>
+            </div>
             <small>Experiences</small>
           </div>
           <div className='profile__border'>
@@ -31,22 +33,26 @@ const Biography = () => {
               <Counter n ={5}/>
               <small> + </small>
             </div>
-            <small>Projects and Hackathons</small>
+            <small>Projects</small>
           </div>
 
           <div className='profile__mobile'>
+
             <div>
-              <Counter n ={4}/>
+              <div className='counter__mobile'>
+                <Counter n ={4}/>
+              </div>
               <small>Experiences</small>
             </div>
             
             <div>
-              <div className='counter'>
+              <div className='counter__mobile'>
                 <Counter n ={5}/>
                 <small> + </small>
               </div>
-              <small>Projects and Hackathons</small>
+              <small>Projects</small>
             </div>
+
           </div>
         </div>
         

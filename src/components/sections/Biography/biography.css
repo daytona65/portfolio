@@ -15,12 +15,13 @@
 
 .profile__internships,
 .profile__projects {
-    width: 25rem;
+    width: 11rem;
     position: absolute;
     top: 20%;
     font-size: 3rem;
-    line-height: 3rem;
+    line-height: 10rem;
     transition: var(--transition);
+    overflow-wrap: break-word;
 }
 
 .profile__internships {
@@ -34,7 +35,16 @@
 .profile__mobile {
     display: none;
 }
+
 .counter {
+    font-size: 10rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.counter__mobile {
+    font-size: 5rem;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -108,6 +118,7 @@
     }
 
     .profile__mobile {
+        font-size: 3rem;
         margin: 2rem;
         display: flex;
         flex-direction: column;
