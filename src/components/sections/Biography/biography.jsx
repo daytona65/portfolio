@@ -1,5 +1,5 @@
 import React from 'react';
-import profile from '../../../assets/images/bali.jpg';
+import profile from '../../../assets/images/bali2.jpg';
 import {FaBriefcase, FaCode, FaCodeBranch} from 'react-icons/fa';
 import './biography.css';
 

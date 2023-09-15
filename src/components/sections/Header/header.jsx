@@ -1,4 +1,5 @@
 import './header.css';
+import { useEffect } from 'react';
 import gsap from 'gsap';
 import SplitTextJS from 'split-text-js';
 
@@ -13,25 +14,27 @@ const Explode = name => {
 };
 
 const Header = () => {
-	const titles = gsap.utils.toArray('.header__title');
-	const timeline = gsap.timeline();
-	
-	titles.forEach(title => {
-		const splitTitle = new SplitTextJS(title);
-		timeline.from(splitTitle.chars, {
-			opacity: 0,
-			y: 30,
-			rotateX: -90,
-			stagger: .02,
-		}, "<")
-		.to(splitTitle.chars, {
-			opacity: 0,
-			y: -10,
-			rotateX: 90,
-			stagger: .02,
-		}, "<1")
-	})
-	timeline.repeat(-1);
+	useEffect(() => {
+		const titles = gsap.utils.toArray('.header__title');
+		const timeline = gsap.timeline();
+		
+		titles.forEach(title => {
+			const splitTitle = new SplitTextJS(title);
+			timeline.from(splitTitle.chars, {
+				opacity: 0,
+				y: 30,
+				rotateX: -90,
+				stagger: .02,
+			}, "<")
+			.to(splitTitle.chars, {
+				opacity: 0,
+				y: -10,
+				rotateX: 90,
+				stagger: .02,
+			}, "<1")
+		})
+		timeline.repeat(-1);
+	}, []);
 	
 	return (
 		<header id='header'>
