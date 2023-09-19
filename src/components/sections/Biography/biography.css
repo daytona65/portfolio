@@ -109,10 +109,6 @@
         margin: auto;
     }
 
-    .biography__content {
-        margin-left: 0;
-    }
-
     .profile {
         flex-direction: column;
     }
