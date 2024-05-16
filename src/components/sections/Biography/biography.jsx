@@ -51,7 +51,6 @@ const Biography = () => {
             </div>
             <small>Projects</small>
           </div>
-
         </div>
       </div>
       
@@ -62,7 +61,7 @@ const Biography = () => {
 
       <div className='biography__content'>
         <p>I am an aspiring software engineer who enjoys working on projects that involve anything from responsive front-ends 
-            to developing efficient back-ends. Currently, I am a penultimate computer science undergraduate at the National University of Singapore.
+            to efficient back-ends. Currently, I am a penultimate computer science undergraduate at the National University of Singapore.
             I have experience working with a {' '}
             <a href="https://www.linkedin.com/company/serversam-pte-ltd/" target="_blank">startup</a>, 
             school-based projects, and a {' '}

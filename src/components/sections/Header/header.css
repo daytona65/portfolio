@@ -5,18 +5,30 @@
 */
 header {
     padding-bottom: 6rem;
-    height: 50vh;
+    height: 100vh;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
+    /* Debug */
 }
 
-video {
+/* video {
     position: absolute;
     z-index: -1;
     width: 100%;
     height: 50%;
     overflow: hidden;
+} */
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
 }
 
 /* dot signifies className */
@@ -29,10 +41,21 @@ video {
     flex-direction: column;
     height: 100%;
     position: relative;
+    /* Debug */
 }
 
 .header__name {
     width: 16rem;
+    /* background: linear-gradient(60deg, #ff0000, #ffff00, #00ff22, #00fff7, #0033ff, #9500ff, #ff00ee, #ff006f, #ff0000); */
+    background: linear-gradient(30deg,  #46ffec,  #0a897c, var(--color-bg), #0a897c, #72fff6);
+    background-size: 800%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradient 20s linear infinite;
+    transition-duration: 5ms; 
+    font-family: 'Poppins', sans-serif;
+    font-size: x-large;
 }
 
 /* ================================ NAME ANIMATION ======================== */
@@ -44,7 +67,7 @@ video {
 
 .header__name:hover > .letter {
     /* background: linear-gradient(60deg, #ff0000, #ffff00, #00ff22, #00fff7, #0033ff, #9500ff, #ff00ee, #ff006f, #ff0000); */
-    background: linear-gradient(90deg, var(--color-light), #fed401, #fed401, var(--color-bg), var(--color-bg), var(--color-light));
+    background: linear-gradient(90deg, var(--color-light), var(--color-bg), var(--color-bg), var(--color-light));
     background-size: 800%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -62,7 +85,7 @@ video {
     }
 }
 
-.header__name:hover > .letter:nth-child(1) {
+/* .header__name:hover > .letter:nth-child(1) {
     transform: translate(-40%, -20%) rotate(-10deg);
 }
 
@@ -92,15 +115,16 @@ video {
 
 .header__name:hover > .letter:nth-child(8) {
     transform: translate(30%, -30%) rotate(-12deg);
-}
+} */
 
 .header__titles {
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 .header__title {
     color: var(--color-light);
     line-height: 0;
     margin: 0;
+    font-size: larger;
 }
 /* =================== CTA =======================*/
 

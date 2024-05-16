@@ -1,0 +1,52 @@
+[	
+    {
+        "title": "Software Engineer Intern",
+        "company": "Thales",
+        "location": "Singapore",
+        "range": "May 2023 - August 2023",
+        "url": "https://www.thalesgroup.com/en/digital-identity-and-security",
+        "description": [
+            "Implement new features and bug fixes in Java with stringent unit-testing to continuously improve user experience for internal tools used in Thales DIS.",
+            "Help with code review of other full-time software engineers’ code to maintain code quality and ensure correct implementation of features.",
+            "Involved in DevOps software development cycles in a team of software engineers including sprint planning and backlog refinement to scope tasks for future sprints.",
+            "Refactor thousands of lines of legacy code to improve code readability and ensure adherence to good software engineering principles."
+        ]
+    },
+
+    {
+        "title": "Teaching Assistant",
+        "company": "NUS School of Computing",
+        "location": "Singapore",
+        "range": "January 2023 - April 2023",
+        "url": "https://nus.edu.sg/careers/teaching.html",
+        "description": [
+            "Taught two tutorial classes of a total of 23 students for CS2100 Computer Organisation, a course on the concepts of MIPS Architecture",
+            "Guided students through tutorials and assignments with a gamified learning system to make learning enjoyable",
+            "Graded their assignments and projects while providing constructive feedback afterwards."
+        ]
+    },
+
+    {
+        "title": "Blockchain Developer",
+        "company": "NUS Fintech Society",
+        "location": "Singapore",
+        "range": "Aug 2022 - Apr 2023",
+        "url": "https://fintechsociety.comp.nus.edu.sg/",
+        "description": [
+            "Developed the front-end of an on-chain subscription web application to help clients accept crypto for subscription-based services.",
+            "Participate in weekly club meetings to discuss the latest happenings in the Blockchain space."
+        ]
+    },
+
+    {
+        "title": "Junior Full Stack Developer",
+        "company": "ServerSam",
+        "location": "Singapore",
+        "range": "May 2022 - July 2022",
+        "url": "https://serversam.com/",
+        "description": [
+            "Developed websites for e-commerce businesses on the ASP.NET framework with SQL Server Management studio databases in Javascript, C#, HTML, CSS",
+            "Worked with other interns to implement features and resolve bug tickets."
+        ]
+    }
+]

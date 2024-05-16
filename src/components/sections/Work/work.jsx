@@ -6,7 +6,19 @@ import { CSSTransition } from 'react-transition-group';
 import styled, { ThemeProvider } from 'styled-components';
 
 const Work = () => {
-	const jobData = [	
+	const jobData = [
+		{
+			title: 'Software Engineer Intern',
+			company: 'OCBC',
+			location: 'Singapore',
+			range: 'Jan 2024 - May 2024',
+			url: 'https://www.linkedin.com/company/ocbc-bank/mycompany/verification/',
+			description: [
+				"Implement new screens and bug fixes to OCBC’s iOS mobile banking application in Swift.",
+				"Create front end features for a banking application on Apple’s visionOS for a future production release in Swift and SwiftUI."
+			],
+		},
+
 		{
 			title: 'Software Engineer Intern',
 			company: 'Thales',
@@ -35,7 +47,7 @@ const Work = () => {
 		},
 
 		{
-			title: 'Blockchain Developer',
+			title: 'Software Developer',
 			company: 'NUS Fintech Society',
 			location: 'Singapore',
 			range: 'Aug 2022 - Apr 2023',

@@ -13,6 +13,18 @@ const Explode = name => {
 	return <h1 className='header__name'>{spans}</h1>
 };
 
+// Background Video in nichalim.com Assets
+const largeId = '1zkXmXFeahDnKvHqAIykeY8TkudJnrcuc'; // 600MB
+const smallId = `1DHsteBd_XRnM7RwaZBMJGrfqNG70iyr5`; //10MB
+const gifId = `1bkeOXngzEBNdQbYMblqKRHwf4aDMjn9A`; // 974KB
+const biggifId = `19DXqVLJyUkqng8IydE0q8FWqBDKHauOu`
+const youtubeUrl = `https://youtu.be/vEUy1ICWYmU`
+const videoId = biggifId
+const driveUrl = `https://drive.google.com/file/d/${videoId}/view?usp=drive_link`; // Doesn't work
+const shareUrl = `https://drive.google.com/file/d/${videoId}/view?usp=sharing`; //Asks for permissions
+const previewUrl = `https://drive.google.com/file/d/${videoId}/preview`;
+const downloadUrl = `https://drive.google.com/uc?export=download&id=${videoId}` //Downloads the video immediately
+
 const Header = () => {
 	useEffect(() => {
 		const titles = gsap.utils.toArray('.header__title');
@@ -24,13 +36,13 @@ const Header = () => {
 				opacity: 0,
 				y: 30,
 				rotateX: -90,
-				stagger: .02,
+				stagger: .00,
 			}, "<")
 			.to(splitTitle.chars, {
 				opacity: 0,
 				y: -10,
 				rotateX: 90,
-				stagger: .02,
+				stagger: .00,
 			}, "<1")
 		})
 		timeline.repeat(-1);
@@ -39,16 +51,31 @@ const Header = () => {
 	return (
 		<header id='header'>
 			<div className="container header__container">
-				<h2> Hello, I am </h2>
-				{Explode("Nicholas")}
-				<div className='header__titles'>
-					<p className="header__title">Software Engineer</p>
-					<p className="header__title">Java Developer</p>
-					<p className="header__title">Videographer</p>
+				{/* {Explode("Nicholas")} */}
+				<h2 className='header__name'>NICHOLAS HALIM</h2>
+				<div className='container header__titles'>
+					<p className="header__title">Software Engineering</p>
+					<p className="header__title">Mobile Development</p>
+					<p className="header__title">Videography</p>
 					<p className="header__title">Creative</p>
-					<p className="header__title">Team Leader</p>
-					<p className="header__title">Problem Solver</p>
+					<p className="header__title">Product Management</p>
+					<p className="header__title">Data Analyst</p>
 				</div>
+				<video autoPlay loop muted>
+					<source src={youtubeUrl} type="video/mp4" />
+					Your browser does not support video.
+           		</video>
+				<iframe 
+					className="background-video" 
+					src={youtubeUrl} 
+					allow="autoPlay"
+					allowTransparency
+					loading='lazy'
+					seamless
+					muted
+					loop
+					title="Google Drive Video"
+				></iframe>
 			</div>
 		</header>
 	);
