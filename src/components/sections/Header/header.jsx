@@ -13,20 +13,6 @@ const Explode = name => {
 	return <h1 className='header__name'>{spans}</h1>
 };
 
-// Background Video in nichalim.com Assets
-const largeId = '1zkXmXFeahDnKvHqAIykeY8TkudJnrcuc'; // 600MB
-const smallId = `1DHsteBd_XRnM7RwaZBMJGrfqNG70iyr5`; //10MB
-const gifId = `1bkeOXngzEBNdQbYMblqKRHwf4aDMjn9A`; // 974KB
-const biggifId = `19DXqVLJyUkqng8IydE0q8FWqBDKHauOu`
-const youtubeUrl = `https://www.youtube.com/embed/vEUy1ICWYmU?si=mQcarRyLb7YFsGps&amp;start=5`
-const s3bucketUrl = `https://nimbalim.s3.us-east-2.amazonaws.com/portfolio/GH020138.MP4`
-const gifUrl = `https://nimbalim.s3.us-east-2.amazonaws.com/portfolio/GH020138.gif`
-const videoId = biggifId
-const driveUrl = `https://drive.google.com/file/d/${videoId}/view?usp=drive_link`; // Doesn't work
-const shareUrl = `https://drive.google.com/file/d/${videoId}/view?usp=sharing`; //Asks for permissions
-const previewUrl = `https://drive.google.com/file/d/${videoId}/preview`;
-const downloadUrl = `https://drive.google.com/uc?export=download&id=${videoId}` //Downloads the video immediately
-
 const Header = () => {
 	useEffect(() => {
 		const titles = gsap.utils.toArray('.header__title');

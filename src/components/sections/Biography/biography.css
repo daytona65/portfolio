@@ -1,6 +1,7 @@
 .container__biography {
     position: relative; 
-    text-align: center;
+    text-align: left;
+    justify-items: center;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10rem;
@@ -74,6 +75,7 @@
 .biography__content p {
     font-size: 1.5rem;
     color: var(--color-light);
+    width: 40rem;
 }
 /* =================== Profile Image ====================*/
 .profile__border,
