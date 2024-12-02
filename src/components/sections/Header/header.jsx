@@ -18,7 +18,9 @@ const largeId = '1zkXmXFeahDnKvHqAIykeY8TkudJnrcuc'; // 600MB
 const smallId = `1DHsteBd_XRnM7RwaZBMJGrfqNG70iyr5`; //10MB
 const gifId = `1bkeOXngzEBNdQbYMblqKRHwf4aDMjn9A`; // 974KB
 const biggifId = `19DXqVLJyUkqng8IydE0q8FWqBDKHauOu`
-const youtubeUrl = `https://youtu.be/vEUy1ICWYmU`
+const youtubeUrl = `https://www.youtube.com/embed/vEUy1ICWYmU?si=mQcarRyLb7YFsGps&amp;start=5`
+const s3bucketUrl = `https://nimbalim.s3.us-east-2.amazonaws.com/portfolio/GH020138.MP4`
+const gifUrl = `https://nimbalim.s3.us-east-2.amazonaws.com/portfolio/GH020138.gif`
 const videoId = biggifId
 const driveUrl = `https://drive.google.com/file/d/${videoId}/view?usp=drive_link`; // Doesn't work
 const shareUrl = `https://drive.google.com/file/d/${videoId}/view?usp=sharing`; //Asks for permissions
@@ -61,21 +63,25 @@ const Header = () => {
 					<p className="header__title">Product Management</p>
 					<p className="header__title">Data Analyst</p>
 				</div>
-				<video autoPlay loop muted>
-					<source src={youtubeUrl} type="video/mp4" />
+				{/* <video autoPlay loop muted playsinline>
+					<source src={gifUrl} type="video/mp4" />
 					Your browser does not support video.
-           		</video>
-				<iframe 
+           		</video> */}
+
+				{/* <iframe 
 					className="background-video" 
-					src={youtubeUrl} 
+					src={gifUrl} 
 					allow="autoPlay"
 					allowTransparency
 					loading='lazy'
 					seamless
+					frameborder="0"
 					muted
+					width={560}
+					height={315}
 					loop
 					title="Google Drive Video"
-				></iframe>
+				></iframe> */}
 			</div>
 		</header>
 	);
