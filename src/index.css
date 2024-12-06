@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root { 
+  --color-bg: #021612;
+  --color-bg-light: rgb(17, 42, 37);
+  --color-bg-variant: #424109;
+  --color-primary: #4e6c0e62;
+  --color-primary-variant: #00c164;
+  --color-white: #ffffff;
+  --color-light: #d19225da;
+  --color-light-transparent: #d1922596;
+
+  --transition: all 400ms ease;
+  --transition1: all 200ms ease-out;
+
+  --container-width-lg: 75%;
+  --container-width-md: 85%;
+  --container-width-sm: 90%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Removes scrollbar completely */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.7;
+  /* background-image: url(assets/images/bali.jpg); To be changed */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ========================== General Styles ========================== */
+
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500; /* Set to bold for all headers */
+}
+
+/* Creates space between each section */
+section {
+  margin-top: 8rem; 
+  height: 100vh;
+}
+
+/* CSS for section headers */
+section > h2, 
+section > h5 {
+  text-align: center;
+  color: var(--color-light);
+}
+
+section > h2 {
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+}
+
+.text-light {
+  color: var(--color-light);
+}
+
+/* Hyperlink properties */
+a {
+  color: var(--color-primary-variant);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-white);
+  transform: scale(1.1);
+  text-shadow: 0px -0.7rem var(--color-light);
+}
+
+/* Button properties */
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--color-primary);
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--color-white);
+  color: var(--color-bg);
+  border-color: transparent;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ============= MEDIA QUERIES (TABLETS. Medium) ===================*/
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+
+  section {
+    margin-top: 6rem;
+  }
+}
+
+/* ============= MEDIA QUERIES (Mobile devices. Small) ===================*/
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+
+  section > h2 {
+    margin-bottom: 2rem;
+  }
+}
